@@ -1,3 +1,3 @@
-FROM rhel7:latest
+FROM registry.access.redhat.com/openshift3/jenkins-2-rhel7
 ADD plugins.sh /opt/sonarqube/bin/plugins.sh
-RUN /opt/sonarqube/bin/plugins.sh ${SONAR_PLUGINS_LIST}
+RUN /opt/sonarqube/bin/plugins.sh github
